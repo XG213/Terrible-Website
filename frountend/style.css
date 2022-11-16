@@ -5,15 +5,14 @@
 	--color3: #6E3FAF;
 	--color4: #A984DE;
 	--color5: #CEB5F0;
-
+	word-break: break-all;
 }
 
 /*{padding:0; margin:0;} /* remove stupid margins unless specified (reenabled maybe)*/
-#a {
-	margin: 0;
-	padding: 0;
+a, a:hover, a:visited, a:active {
+	color: var(--color5);
+	text-decoration: none; /* todo later */
 }
-
 .root {
 	position: relative;
 	width: 70%;
@@ -24,6 +23,13 @@
 .title {
 	font-size: 400%;
 	font-family: var(--font1);
+	color: var(--color5);
+}
+
+.darkmode-switch {
+	display: flex;
+	align-items: left;
+	justify-content: left;
 	color: var(--color5);
 }
 
@@ -70,6 +76,24 @@
 	justify-content: center;
 }
 
+.link {
+	color: var(--color5);
+}
+
+.secret {
+	position: fixed;
+	width: 1%;
+	height: 1%;
+	top: 99%;
+	right: 99%;
+}
+
+@media (scripting: none) {
+	.secret {
+	  display: none;
+	}
+  }
+
 .nav-btn {
 	text-align: center;
 	cursor: pointer;
@@ -85,33 +109,17 @@
 	background-color: var(--color2);
 	transition-duration: 0.4s;
 }
+
 .btn-current {
-	color: var(--color2);
-	background-color: var(--color5);
+	color: var(--color2) !important;
+	background-color: var(--color5) !important;
 }
+
 .nav-btn:hover {
 	color: var(--color2);
 	background-color: var(--color5);
 }
 
-a:link {
-	text-decoration: none;
-}
-
-a:visited {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-a:active {
-	text-decoration: none;
-}
-.link {
-	color: var(--color5);
-}
 body {
 	background-color: #202020;
 }
